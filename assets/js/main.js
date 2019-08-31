@@ -1,13 +1,59 @@
-var companies = [
-	"Alphabet Inc (GOOGL)",
-	"Amazon (AMZN)",
-	"Apple (AAPL)",
-	"Bank of America Corp (BAC)",
-	"Berkshire Hathaway Inc. Class A (BRK.A)",
-	"Cisco Systems Inc. (CSCO)",
-	"Microsoft Corporation (MSFT)",
-	"Tesla Inc (TSLA)"
-];
+var companies = [];
+	// "Alphabet Inc (GOOGL)",
+	// "Amazon (AMZN)",
+	// "Apple (AAPL)",
+	// "Bank of America Corp (BAC)",
+	// "Berkshire Hathaway Inc. Class A (BRK.A)",
+	// "Cisco Systems Inc. (CSCO)",
+	// "Microsoft Corporation (MSFT)",
+	// "Tesla Inc (TSLA)"
+// ];
+
+
+
+var typingTimer;                //timer identifier
+var doneTypingInterval = 1000;  //time in ms, 5 second for example
+var $input = $('#myInput');
+
+//on keyup, start the countdown
+$input.on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown 
+$input.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+  console.log($input.val())
+  var search = $input.val()
+  fetch(
+
+	`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=1YK0TA3NL2XSK2QF`
+
+)
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (myJson) {
+		console.log(myJson);
+
+		companies = myJson.bestMatches.map(i => [i.symbol, i.name]);
+		for (let i = 0; i < 5; i++) {
+			console.log(myJson.bestMatches[i]);
+		}
+
+	});
+
+}
+
+
+
+
+
 
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
