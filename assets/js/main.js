@@ -54,7 +54,7 @@ function autocomplete(inp, arr) {
                     fetch(
                         `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${
                             result[1]
-                        }&interval=5min&apikey=demo`
+                        }&interval=1min&apikey=B3BZLHNXMTV4YMEK`
                     )
                         .then(function(response) {
                             return response.json();
