@@ -1,0 +1,87 @@
+body{
+background-color: white !important;
+}
+
+
+.tickerSearchForm {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 60vh;
+}
+
+.tickerSearch {
+	width: 100vw;
+	height: 100px;
+	border: none;
+	text-align: center;
+	font-size: 70px;
+	text-transform: capitalize;
+	font-family: 'Raleway', sans-serif;
+	height: 60vh;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+
+
+* { box-sizing: border-box; }
+body {
+  font: 16px Arial;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-family: 'Raleway', sans-serif;
+  height: 35vh;
+}
+}
+input {
+  border: 1px solid transparent;
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #ffffff;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: #ffffff;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #ffffff;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #0000000a;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #0000000a !important;
+}
