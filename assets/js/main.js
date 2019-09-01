@@ -3550,7 +3550,7 @@ var companies = [
 // ];
 
 var typingTimer; //timer identifier
-var doneTypingInterval = 500; //time in ms, 5 second for example
+var doneTypingInterval = 1; //time in ms, 5 second for example
 var $input = $("#myInput");
 
 //on keyup, start the countdown
@@ -3628,11 +3628,21 @@ function autocomplete(inp, arr) {
                     /*insert the value for the autocomplete text field:*/
                     inp.value = this.getElementsByTagName("input")[0].value;
                     var tag = this.getElementsByTagName("input")[0].value;
-                    var result = tag.match(/\((.*)\)/);
+                    
+                   function test(input) {
+                       var n = input.split(" ");
+                       return n[n.length - 1];
+                   }
+                    //tag.match(/\((.*)\)/);
+                    var n = tag.split(" ");
+                    n = n[n.length - 1];
+                    console.log(n)
+                   
                     fetch(
                         `https://cloud.iexapis.com/stable/stock/${
-                            result[1]
+                            n
                         }/quote?token=pk_e9e24d928d1f4b4e8b5565d2561c4bb1`
+                    
                     )
                         .then(function(response) {
                             return response.json();
@@ -3644,7 +3654,7 @@ function autocomplete(inp, arr) {
                                 "price"
                             ).innerHTML = `$${myJson.latestPrice}`;
                         });
-
+                    
                     /*close the list of autocompleted values,
 					(or any other open lists of autocompleted values:*/
                     closeAllLists();
