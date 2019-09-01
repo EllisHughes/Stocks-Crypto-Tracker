@@ -3571,12 +3571,12 @@ function doneTyping() {
     // fetch(
     //     `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=1YK0TA3NL2XSK2QF`
     // )
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(myJson) {
-            companies = [];
-            for (let i = 0; i < 5; i++) {
+        // .then(function(response) {
+        //     return response.json();
+        // })
+        // .then(function(myJson) {
+        //     companies = [];
+        //     for (let i = 0; i < 5; i++) {
             //     const match = myJson.bestMatches[i];
             //     const symbol = match["1. symbol"];
             //     const name = match["2. name"];
