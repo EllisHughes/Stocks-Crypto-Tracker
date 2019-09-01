@@ -129,22 +129,23 @@ function autocomplete(inp, arr) {
                             ).innerHTML = `$${myJson.latestPrice}`;
                         });
 
-                    fetch(
-                        `https://min-api.cryptocompare.com/data/price?fsym=${
-                        n
-                        }&tsyms=USD&api_key={c41d7c8ed5f3e85062a7e70d68d0c98810bb7caab5310dadf7bfa649db78e350}`)
+                       
+                    // fetch(
+                    //     `https://min-api.cryptocompare.com/data/price?fsym=${
+                    //     n
+                    //     }&tsyms=USD&api_key={c41d7c8ed5f3e85062a7e70d68d0c98810bb7caab5310dadf7bfa649db78e350}`)
 
-                        .then(function (response) {
-                            return response.json();
+                    //     .then(function (response) {
+                    //         return response.json();
 
-                        })
-                        .then(function (myJson) {
-                            console.log(myJson.USD);
+                    //     })
+                    //     .then(function (myJson) {
+                    //         console.log(myJson.USD);
 
-                            document.getElementById(
-                                "price"
-                            ).innerHTML = `$${myJson.USD}`;
-                        });
+                    //         document.getElementById(
+                    //             "price"
+                    //         ).innerHTML = `$${myJson.USD}`;
+                    //     });
 
                     /*close the list of autocompleted values,
 					(or any other open lists of autocompleted values:*/

@@ -29,7 +29,7 @@ var companies = [
 'AAC Holdings, Inc. Common Stock AAC',
 'AAON, Inc. AAON',
 'AAR Corp. Common Stock AIR',
-'Aaron\'s, Inc. Common Stock AAN',
+'Aaron&#39;s, Inc. Common Stock AAN',
 'AB Svensk Ekportkredit (Swedish Export Credit Corporation) ELEMENTS Linked to the MLCX Biofuels Index FUE',
 'AB Svensk Ekportkredit (Swedish Export Credit Corporation) ELEMENTS Linked to the MLCX Grains Index GRU',
 'AB Svensk Ekportkredit (Swedish Export Credit Corporation) ELEMENTS Linked to the Rogers International Commodity Index RJA',

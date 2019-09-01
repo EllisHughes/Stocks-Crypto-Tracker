@@ -7,7 +7,7 @@ background-color: white !important;
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 40vh;
+margin-top: 20vh;
 }
 
 .tickerSearch {
@@ -84,5 +84,5 @@ input[type=submit] {
 }
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
-  background-color: #0000000a !important;
+  background-color: #ff00000a !important;
 }
