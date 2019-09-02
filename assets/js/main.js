@@ -1,9 +1,9 @@
 /* Line 2 not required as netlify can host variables */
 // var k = (api.key)
 
-console.log(process.env.GATSBY_k);
+// console.log(process.env._k);
 
-var k = process.env.GATSBY_k;
+// var k = process.env._k;
 
 var typingTimer; //timer identifier
 var doneTypingInterval = 1; //time in ms, 5 second for example
@@ -81,7 +81,7 @@ function autocomplete(inp, arr) {
                     fetch(
                         `https://cloud.iexapis.com/stable/stock/${
                         n
-                        }/quote?token=${k}`
+                        }/quote?token=pk_e9e24d928d1f4b4e8b5565d2561c4bb1`
                     )
 
                         .then(function (response) {
