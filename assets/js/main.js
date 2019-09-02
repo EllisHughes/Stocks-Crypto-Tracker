@@ -1,27 +1,4 @@
-// var companies = [
-
-//     'Abeona Therapeutics Inc. ABEO',
-//     'Abeona Therapeutics Inc. ABEOW',
-//     'Ability Inc. ABIL',
-//     'ABIOMED, Inc. ABMD',
-//     'Abraxas Petroleum Corporation AXAS',
-//     'AC Immune SA ACIU',
-//     'Acacia Communications, Inc. ACIA',
-//     'Acacia Research Corporation ACTG',
-//     'Acadia Healthcare Company, Inc. ACHC',
-//     'ACADIA Pharmaceuticals Inc. ACAD',
-//     'Acamar Partners Acquisition Corp. ACAM',
-//     'Acamar Partners Acquisition Corp. ACAMU',
-//     'Acamar Partners Acquisition Corp. ACAMW',
-//     'Acasti Pharma, Inc. ACST',
-//     'Accelerate Diagnostics, Inc. AXDX',
-//     'Acceleron Pharma Inc. XLRN',
-//     'Accuray Incorporated ARAY',
-//     'AcelRx Pharmaceuticals, Inc. ACRX',
-//     'Acer Therapeutics Inc. ACER',
-//     'Bitcoin BTC',
-//     'Ethereum ETH',
-// ];
+var k = (api.key)
 
 var typingTimer; //timer identifier
 var doneTypingInterval = 1; //time in ms, 5 second for example
@@ -42,23 +19,7 @@ $input.on("keydown", function () {
 function doneTyping() {
     console.log($input.val());
     var search = $input.val();
-    // fetch(
-    //     `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=1YK0TA3NL2XSK2QF`
-    // )
-    // .then(function(response) {
-    //     return response.json();
-    // })
-    // .then(function(myJson) {
-
-    //     for (let i = 0; i < 5; i++) {
-    //     const match = myJson.bestMatches[i];
-    //     const symbol = match["1. symbol"];
-    //     const name = match["2. name"];
-    //     companies.push(`${name} (${symbol})`);
-    // }
-    // console.log(companies);
     autocomplete(document.getElementById("myInput"), companies);
-    // });
 }
 
 function autocomplete(inp, arr) {
@@ -111,11 +72,11 @@ function autocomplete(inp, arr) {
                     var n = tag.split(" ");
                     n = n[n.length - 1];
                     console.log(n)
-
+                    // import apiKey from "assets/js/pk.js"
                     fetch(
                         `https://cloud.iexapis.com/stable/stock/${
                         n
-                        }/quote?token=pk_e9e24d928d1f4b4e8b5565d2561c4bb1`
+                        }/quote?token=${k}`
                     )
 
                         .then(function (response) {
@@ -128,36 +89,16 @@ function autocomplete(inp, arr) {
                                 "price"
                             ).innerHTML = `$${myJson.latestPrice}`;
 
+                            /* Clears text in price when backspace is pressed*/
                             inp.addEventListener("keydown", function (e) {
                                 if (e.keyCode == 8) {
                                     document.getElementById(
                                         "price"
                                     ).innerHTML = ``;
-                                    $("#myInput").empty();
                                 }
-                            })
+                            });
                         });
 
-                       
-                    // fetch(
-                    //     `https://min-api.cryptocompare.com/data/price?fsym=${
-                    //     n
-                    //     }&tsyms=USD&api_key={c41d7c8ed5f3e85062a7e70d68d0c98810bb7caab5310dadf7bfa649db78e350}`)
-
-                    //     .then(function (response) {
-                    //         return response.json();
-
-                    //     })
-                    //     .then(function (myJson) {
-                    //         console.log(myJson.USD);
-
-                    //         document.getElementById(
-                    //             "price"
-                    //         ).innerHTML = `$${myJson.USD}`;
-                    //     });
-
-                    /*close the list of autocompleted values,
-					(or any other open lists of autocompleted values:*/
                     closeAllLists();
                 });
                 a.appendChild(b);
@@ -220,17 +161,4 @@ function autocomplete(inp, arr) {
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
-
-
-    /* Clears text in price when backspace is pressed*/
-    // inp.addEventListener("keydown", function (e) {
-    //     if (e.keyCode == 8) {
-    //         document.getElementById(
-    //             "price"
-    //         ).innerHTML = ``;
-    //         document.getElementById(
-    //             "myInput"
-    //         ).innerHTML = ``;
-    //     }
-    // })
 }
