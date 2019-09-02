@@ -486,7 +486,6 @@ var companies = [
 'Anworth Mortgage Asset  Corporation Preferred Stock Series B 6.25% ANH$B',
 'Anworth Mortgage Asset Corporation Common Stock ANH',
 'Anworth Mortgage Asset Corporation Series A Preferred Stock ANH$A',
-'AOL Inc. AOL Inc. Common Stock AOL',
 'Aon plc Class A Ordinary Shares (UK) AON',
 'Aoxing Pharmaceutical Company, Inc. New Common Stock AXN',
 'Apache Corporation Common Stock APA',

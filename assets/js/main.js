@@ -22,7 +22,7 @@ $input.on("keydown", function () {
 
 //user is "finished typing," do something
 function doneTyping() {
-    console.log($input.val());
+    // console.log($input.val());
     var search = $input.val();
     autocomplete(document.getElementById("myInput"), companies);
 }
@@ -76,7 +76,7 @@ function autocomplete(inp, arr) {
                     //tag.match(/\((.*)\)/);
                     var n = tag.split(" ");
                     n = n[n.length - 1];
-                    console.log(n)
+                    // console.log(n)
                     // import apiKey from "assets/js/pk.js"
                     fetch(
                         `https://cloud.iexapis.com/stable/stock/${
@@ -88,7 +88,7 @@ function autocomplete(inp, arr) {
                             return response.json();
                         })
                         .then(function (myJson) {
-                            console.log(myJson.latestPrice);
+                            // console.log(myJson.latestPrice);
 
                             document.getElementById(
                                 "price"
