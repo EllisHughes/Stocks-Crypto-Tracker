@@ -127,6 +127,17 @@ function autocomplete(inp, arr) {
                             document.getElementById(
                                 "price"
                             ).innerHTML = `$${myJson.latestPrice}`;
+
+                            inp.addEventListener("keydown", function (e) {
+                                if (e.keyCode == 8) {
+                                    document.getElementById(
+                                        "price"
+                                    ).innerHTML = ``;
+                                    document.getElementById(
+                                        "myInput"
+                                    ).innerHTML = ``;
+                                }
+                            })
                         });
 
                        
@@ -214,14 +225,14 @@ function autocomplete(inp, arr) {
 
 
     /* Clears text in price when backspace is pressed*/
-    inp.addEventListener("keydown", function (e) {
-        if (e.keyCode == 8) {
-            document.getElementById(
-                "price"
-            ).innerHTML = ``;
-            document.getElementById(
-                "myInput"
-            ).innerHTML = ``;
-        }
-    })
+    // inp.addEventListener("keydown", function (e) {
+    //     if (e.keyCode == 8) {
+    //         document.getElementById(
+    //             "price"
+    //         ).innerHTML = ``;
+    //         document.getElementById(
+    //             "myInput"
+    //         ).innerHTML = ``;
+    //     }
+    // })
 }
