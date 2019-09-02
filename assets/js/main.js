@@ -133,9 +133,7 @@ function autocomplete(inp, arr) {
                                     document.getElementById(
                                         "price"
                                     ).innerHTML = ``;
-                                    document.getElementById(
-                                        "myInput"
-                                    ).innerHTML = ``;
+                                    $("#myInput").empty();
                                 }
                             })
                         });
