@@ -1,6 +1,8 @@
 /* Line 2 not required as netlify can host variables */
 // var k = (api.key)
 
+console.log(process.env.k)
+
 var typingTimer; //timer identifier
 var doneTypingInterval = 1; //time in ms, 5 second for example
 var $input = $("#myInput");
