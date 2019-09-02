@@ -1,0 +1,12 @@
+body {
+    margin-top: 20vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+  }
+
+.heading {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+  

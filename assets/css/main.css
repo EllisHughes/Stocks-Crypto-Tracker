@@ -7,7 +7,7 @@ background-color: white !important;
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 40vh;
+margin-top: 20vh;
 }
 
 .tickerSearch {
@@ -43,7 +43,7 @@ body {
   height: 10vh;
   border: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 0.8rem;
   text-transform: capitalize;
   font-family: 'Raleway', sans-serif;;
 }
@@ -84,5 +84,5 @@ input[type=submit] {
 }
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
-  background-color: #0000000a !important;
+  background-color: #ff00000a !important;
 }
