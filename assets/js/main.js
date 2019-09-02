@@ -1,4 +1,5 @@
-var k = (api.key)
+/* Line 2 not required as netlify can host variables */
+// var k = (api.key)
 
 var typingTimer; //timer identifier
 var doneTypingInterval = 1; //time in ms, 5 second for example
