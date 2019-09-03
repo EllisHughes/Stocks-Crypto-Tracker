@@ -1,13 +1,17 @@
 body{
-background-color: white !important;
+background-color: #F8F9FA !important;
+font: 16px Arial;
 }
 
+.navBar {
+  font-size: 1.25rem;
+}
 
 .tickerSearchForm {
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 20vh;
+margin-top: 10vh;
 }
 
 .tickerSearch {
@@ -32,15 +36,13 @@ textarea:focus, input:focus{
 }
 
 * { box-sizing: border-box; }
-body {
-  font: 16px Arial;
-}
+
 
 .autocomplete {
   position: relative;
   display: inline-block;
   width: 100vw;
-  height: 10vh;
+  height: 11vh;
   border: none;
   text-align: center;
   font-size: 0.8rem;
@@ -49,21 +51,21 @@ body {
 }
 input {
   border: 1px solid transparent;
-  background-color: #ffffff;
+  background-color: #F8F9FA;
   padding: 10px;
   font-size: 16px;
 }
 input[type=text] {
-  background-color: #ffffff;
+  background-color: #F8F9FA;
   width: 100%;
 }
 input[type=submit] {
-  background-color: #ffffff;
+  background-color: #F8F9FA;
   color: #fff;
 }
 .autocomplete-items {
   position: absolute;
-  border: 1px solid #ffffff;
+  border: 1px solid #F8F9FA;
   border-bottom: none;
   border-top: none;
   z-index: 99;
@@ -75,8 +77,8 @@ input[type=submit] {
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  background-color: #F8F9FA;
+  border-bottom: 1px solid #F8F9FA;
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
@@ -85,4 +87,10 @@ input[type=submit] {
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: #ff00000a !important;
+}
+
+.heading {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
