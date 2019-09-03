@@ -79,9 +79,7 @@ function autocomplete(inp, arr) {
                     // console.log(n)
                     // import apiKey from "assets/js/pk.js"
                     fetch(
-                        `https://cloud.iexapis.com/stable/stock/${
-                        n
-                        }/quote?token=pk_e9e24d928d1f4b4e8b5565d2561c4bb1`
+                        `https://cloud.iexapis.com/stable/stock/${n}/quote?token=pk_e9e24d928d1f4b4e8b5565d2561c4bb1`
                     )
 
                         .then(function (response) {
@@ -94,7 +92,6 @@ function autocomplete(inp, arr) {
                                 "price"
                             ).innerHTML = `$${myJson.latestPrice}`;
 
-                            /* Clears text in price when backspace is pressed*/
                             inp.addEventListener("keydown", function (e) {
                                 if (e.keyCode == 8) {
                                     document.getElementById(
