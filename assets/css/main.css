@@ -31,8 +31,8 @@ textarea:focus, input:focus{
 
 #price {
   color: black;
-  font-size: 100;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 300 !important;
 }
 
 * { box-sizing: border-box; }
