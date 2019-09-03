@@ -25,6 +25,7 @@ function doneTyping() {
     // console.log($input.val());
     var search = $input.val();
     autocomplete(document.getElementById("myInput"), companies);
+    console.log(companies)
 }
 
 function autocomplete(inp, arr) {
