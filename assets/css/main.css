@@ -1,11 +1,11 @@
 body{
 background-color: #F8F9FA !important;
-font size: 1rem;
+font-size: 1rem;
 }
 
-/* .navBar {
-  font-size: 5rem;
-} */
+.navBar {
+  position: absolute;
+}
 
 .tickerSearchForm {
 display: flex;
@@ -94,6 +94,10 @@ input[type=submit] {
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
+
+
+
+
 
 /* responsive */
 .collapse:not(.show) {

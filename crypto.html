@@ -1,51 +1,62 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-    <title>Cryptocurrency Tracker</title>
+    <title>Stock Price Tracker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/crypto.css">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300&display=swap" rel="stylesheet" />
+    <!-- <script type="text/javascript" src="assets/json/companyList.json"></script> -->
 </head>
 
-<nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center navBar">
-    <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
-        <ul class="navbar-nav mx-auto text-center">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Stocks</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="crypto.html">Crypto</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+
+
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h1 class="heading">One of three columns</h1>
-            </div>
-            <div class="col-sm">
-                <h1 class="heading">One of three columns</h1>
-            </div>
-            <div class="col-sm">
-                <h1 class="heading">One of three columns</h1>
-            </div>
+
+    <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center navBar">
+        <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Stocks</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="crypto.html">Crypto</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+
+
+    <div class="autocomplete tickerSearchForm cursor">
+        <form autocomplete="off" action="/action_page.php">
+            <input id="myInput" onblur="this.focus()" type="text" class="tickerSearch" placeholder="" autofocus />
+        </form>
+        <h1 id="price"></h1>
     </div>
 
+    <!-- Scripts -->
 
+    <!-- <script src="assets/js/pk.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-        <script src="assets/js/crypto.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/companies.js"></script>
+    <script>
+            // autocomplete(document.getElementById("myInput"), companies);
+    </script>
+
+
+
 </body>
 
 </html>
