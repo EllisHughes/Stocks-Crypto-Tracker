@@ -1,11 +1,11 @@
 body{
 background-color: #F8F9FA !important;
-font: 16px Arial;
+font size: 1rem;
 }
 
-.navBar {
-  font-size: 1.25rem;
-}
+/* .navBar {
+  font-size: 5rem;
+} */
 
 .tickerSearchForm {
 display: flex;
@@ -100,23 +100,20 @@ input[type=submit] {
   display: block !important;
 }
 
-@media (min-width: 100px) {
-  .navBar {
-    font-size: 0.5rem !important;
+@media (min-width: 1px){
+  .navBar{
+    font-size: 0.75rem;
   }
 }
 
-@media (min-width: 400px) {
-  .navBar {
-    font-size: 1rem !important;
+@media (min-width: 400px){
+  .navBar{
+    font-size: 1rem;
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+@media (min-width: 768px){
+  .navBar{
+    font-size: 1.75rem;
+  }
+}
