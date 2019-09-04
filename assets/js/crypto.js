@@ -1,23 +1,4 @@
-// const fetch = require('node-fetch');
 
-// exports.handler = async (event, context) => {
-//     try{
-//       const latitude  = event.queryStringParameters.latitude;
-
-//       const response = await fetch(`https://api.darksky.net/forecast/${process.env.DARK_SKY_KEY}/${latitude},${longitude}`);
-//       const data     = await response.json();
-
-//       return {
-//         statusCode: 200,
-//         body: JSON.stringify(data)
-//       };
-//     } catch (err) {
-//       return {
-//         statusCode: 500,
-//         body: err.toString()
-//       };
-//     }
-//   };
 
 var typingTimer; //timer identifier
 var doneTypingInterval = 1; //time in ms, 5 second for example
@@ -92,32 +73,13 @@ function autocomplete(inp, arr) {
                     n = n[n.length - 1];
                     // console.log(n)
                     // import apiKey from "assets/js/pk.js"
+                    var n =  JSON.stringify(n);
+
+
                     console.log(n)
-
-                    const fetch = require('node-fetch');
-                    exports.handler = async (event, context) => {
-                        try {
-                            var n = event.queryStringParameters.n;
-
-                            `https://cloud.iexapis.com/stable/crypto/${n}usd/quote?token=${process.env.CRYPTO_KEY}`
-                            // .then(function (response) {
-                            //     return response.json();
-                            // }
-                            const latestPrice = await response.json();
-
-                            return {
-                                statusCode: 200,
-                                body: JSON.stringify(latestPrice)
-                            };
-
-                        } catch (err) {
-                            return {
-                                statusCode: 500,
-                                body: err.toString()
-                            };
-                        }
-                    };
-                   console.log(latestPrice)
+                    
+                    
+                    
 
                 closeAllLists();
             });
