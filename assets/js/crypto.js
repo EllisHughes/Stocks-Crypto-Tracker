@@ -69,14 +69,14 @@ function autocomplete(inp, arr) {
                         return n[n.length - 1];
                     }
                     //tag.match(/\((.*)\)/);
-                    var n = tag.split(" ");
-                    n = n[n.length - 1];
-                    // console.log(n)
-                    // import apiKey from "assets/js/pk.js"
-                    var json =  JSON.stringify(n);
-                    localStorage.setItem('./assets/js/', JSON.stringify(json));
-                    // var n = JSON.parse('', JSON.stringify(n));
-                    console.log(json)
+                    // var n = tag.split(" ");
+                    // n = n[n.length - 1];
+                    // // console.log(n)
+                    // // import apiKey from "assets/js/pk.js"
+                    // var json =  JSON.stringify(n);
+                    // localStorage.setItem('./assets/js/', JSON.stringify(json));
+                    // // var n = JSON.parse('', JSON.stringify(n));
+                    // console.log(json)
                     
                     
                     
