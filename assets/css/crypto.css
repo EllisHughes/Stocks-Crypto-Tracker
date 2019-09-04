@@ -1,5 +1,27 @@
 body {
-  background-color: #F8F9FA;
+  background-color: #F8F9FA !important;
+  margin: 0%;
+  padding: 0%;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  margin-top: 5vh;
+}
+
+.cryptoNames {
+  margin-bottom: 5%;
+}
+
+.cryptoPrices {
+  font-family: 'Work Sans', sans-serif;
+}
+
+#cryptoLogo {
+  margin-bottom: 4%;
 }
 
 .navBar {
@@ -17,4 +39,87 @@ body {
   font-size: 18px;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+}
+
+#row-1 {
+  text-align: center;
+}
+
+
+/* responsive */
+.collapse:not(.show) {
+  display: block !important;
+}
+
+
+@media (min-width: 1px){
+  .navBar{
+    font-size: 0.75rem;
+  }
+
+  #cryptoLogo {
+    max-width: 6vw;
+  }
+
+  .cryptoNames {
+    font-size: 1.25vw;
+  }
+
+  .cryptoPrices {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 400px){
+  .navBar{
+    font-size: 1rem;
+  }
+
+  #cryptoLogo {
+    max-width: 6vw;
+  }
+
+  .cryptoNames {
+    font-size: 1.25vw;
+  }
+
+  .cryptoPrices {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px){
+  .navBar{
+    font-size: 1.5rem;
+  }
+
+  #cryptoLogo {
+    max-width: 6vw;
+  }
+
+  .cryptoNames {
+    font-size: 1.25vw;
+  }
+
+  .cryptoPrices {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 1000px){
+  .navBar{
+    font-size: 1.75rem;
+  }
+
+  #cryptoLogo {
+    max-width: 6vw;
+  }
+
+  .cryptoNames {
+    font-size: 1.25vw;
+  }
+  
+  .cryptoPrices {
+    font-size: 2vw;
+  }
 }

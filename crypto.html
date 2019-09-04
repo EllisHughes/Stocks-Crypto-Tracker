@@ -9,12 +9,14 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    
-    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="stylesheet" href="assets/css/crypto.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300&display=swap" rel="stylesheet" />
+
+    
     <!-- <script type="text/javascript" src="assets/json/companyList.json"></script> -->
 </head>
 
@@ -36,25 +38,42 @@
         </div>
     </nav>
 
+    <div id="row-1" class="container">
+        <div class="row">
+            <div class="col-3">
+                <h1 class="cryptoNames">Bitcoin</h1><img id="cryptoLogo" src="assets/images/BTC.svg">
+                <h1 class="cryptoPrices" id="cryptoPricesBitcoin">$</h1>
+            </div>
+            <div class="col-3">
+                <h1 class="cryptoNames">Ethereum</h1><img id="cryptoLogo" src="assets/images/ETH.svg">
+                <h1 class="cryptoPrices" id="cryptoPrices">$</h1>
+            </div>
+            <div class="col-3">
+                <h1 class="cryptoNames">Bitcoin</h1><img id="cryptoLogo" src="assets/images/BTC.svg">
+                <h1 class="cryptoPrices" id="cryptoPrices">$</h1>
+            </div>
+            <div class="col-3">
+                <h1 class="cryptoNames">Bitcoin</h1><img id="cryptoLogo" src="assets/images/BTC.svg">
+                <h1 class="cryptoPrices" id="cryptoPrices">$</h1>
+            </div>
 
-    <div class="autocomplete tickerSearchForm cursor">
-        <form autocomplete="off" action="/action_page.php">
-            <input id="myInput" onblur="this.focus()" type="text" class="tickerSearch" placeholder="" autofocus />
-        </form>
-        <h1 id="price"></h1>
-    </div>
 
-    <!-- Scripts -->
+        </div>
 
-    <!-- <script src="assets/js/pk.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/crypto.js"></script>
-    <script src="functions/token-hider/token-hider.js"></script>
-    <script src="assets/js/cryptocurrencies.js"></script>
-    <script>
+
+
+
+        <!-- Scripts -->
+
+        <!-- <script src="assets/js/pk.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="assets/js/crypto.js"></script>
+        <script src="functions/token-hider/token-hider.js"></script>
+        <script src="assets/js/cryptocurrencies.js"></script>
+        <script>
             // autocomplete(document.getElementById("myInput"), companies);
-    </script>
+        </script>
 
 
 
