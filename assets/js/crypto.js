@@ -73,7 +73,7 @@ function autocomplete(inp, arr) {
                     n = n[n.length - 1];
                     // console.log(n)
                     // import apiKey from "assets/js/pk.js"
-                    var n =  JSON.stringify(n);
+                    
                     
                     
                     
