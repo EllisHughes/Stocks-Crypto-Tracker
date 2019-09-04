@@ -1,10 +1,9 @@
 
   fetch('/assets/js/crypto.js')
-  .then(Response => {
-    return Response.json()
-    console.log(json)
-  })
-
+  .then((resp => resp.json())
+  .then(function(data) {
+  console.log(data)
+  }
 
 // // const axios = require("axios");
 // // const qs = require("qs");
