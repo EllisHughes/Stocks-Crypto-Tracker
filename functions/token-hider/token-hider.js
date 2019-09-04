@@ -1,7 +1,7 @@
 
   fetch('/assets/js/crypto.js')
   .then((resp => resp.json())
-  .then(function(data) {
+  .then(function(data)) {
   console.log(data)
   }
 
