@@ -1,9 +1,10 @@
 
   fetch('/assets/js/crypto.js')
   .then(Response => {
-    if (!Response.ok) {
-      console.log("yes")
-    }
+    return Response.json()
+  })
+  .then(data => {
+    console.log(data)
   })
 
 
