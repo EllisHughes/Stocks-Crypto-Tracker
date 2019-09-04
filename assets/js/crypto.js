@@ -1,6 +1,6 @@
 /* FETCH BITCOIN PRICE */
 function refreshData() {
-    x = 10;
+    x = 30;
     fetch('https://api.coincap.io/v2/assets/bitcoin')
         .then(function (response) {
             return response.json();
