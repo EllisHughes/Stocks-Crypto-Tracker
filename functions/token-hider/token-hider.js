@@ -1,9 +1,10 @@
-
-  fetch('/assets/js/crypto.js')
-  .then((resp => resp.json()
-  .then(function(data) {
-  console.log(data)
-  }
+fetch('/assets/js/crypto.js')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
 
 // // const axios = require("axios");
 // // const qs = require("qs");
