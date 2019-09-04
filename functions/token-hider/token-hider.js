@@ -1,8 +1,8 @@
 
-  fetch('/assets/js/crypto.js')
+  fetch('/assets/js/')
     // .then(res => res.json()) // comment this out for now
-    .then(res => res.text())          // convert to plain text
-    .then(text => console.log(text))  // then log it out
+    .then(res => res.json())          // convert to plain text
+    .then(text => console.log(json))  // then log it out
 
 // // const axios = require("axios");
 // // const qs = require("qs");
