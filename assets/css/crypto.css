@@ -9,7 +9,7 @@ h1 {
 }
 
 .container {
-  margin-top: 5vh;
+  margin-top: 20vh;
 }
 
 .cryptoNames {
@@ -18,6 +18,27 @@ h1 {
 
 .cryptoPrices {
   font-family: 'Work Sans', sans-serif;
+  margin-bottom: -1%;
+}
+
+#btc24 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.25vw;
+}
+
+#eth24 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.25vw;
+}
+
+#ltc24 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.25vw;
+}
+
+#timeFrame {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.8vw;
 }
 
 #cryptoLogo {
@@ -116,7 +137,7 @@ h1 {
   }
 
   .cryptoNames {
-    font-size: 1.25vw;
+    font-size: 1.75vw;
   }
   
   .cryptoPrices {
