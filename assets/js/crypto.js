@@ -6,9 +6,10 @@ function refreshData() {
             return response.json();
         })
         .then(function (myJson) {
+            var price = parseFloat(myJson.data.priceUsd).toFixed(2);
             document.getElementById(
                 "cryptoPricesBitcoin"
-            ).innerHTML = `$` + parseFloat(`${myJson.data.priceUsd}`).toLocaleString('en');
+            ).innerHTML = `$` + parseFloat(`${price}`).toLocaleString('en');
 
 
             document.getElementById(
@@ -25,9 +26,10 @@ function refreshData() {
 
         })
         .then(function (myJson) {
+            var price = parseFloat(myJson.data.priceUsd).toFixed(2);
             document.getElementById(
                 "cryptoPricesEthereum"
-            ).innerHTML = `$` + parseFloat(`${myJson.data.priceUsd}`).toFixed(2);
+            ).innerHTML = `$` + parseFloat(`${price}`).toLocaleString('en');
 
             document.getElementById(
                 "eth24"
@@ -41,9 +43,10 @@ function refreshData() {
 
         })
         .then(function (myJson) {
+            var price = parseFloat(myJson.data.priceUsd).toFixed(2);
             document.getElementById(
                 "cryptoPricesLitecoin"
-            ).innerHTML = `$` + parseFloat(`${myJson.data.priceUsd}`).toFixed(2);
+            ).innerHTML = `$` + parseFloat(`${price}`).toLocaleString('en');
 
             document.getElementById(
                 "ltc24"

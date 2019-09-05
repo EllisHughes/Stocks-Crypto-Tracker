@@ -82,11 +82,11 @@ input[type=submit] {
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
-  background-color: #0000000a;
+  background-color: #7979791a;
 }
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
-  background-color: #ff00000a !important;
+  background-color: #7979791a !important;
 }
 
 .heading {
@@ -94,10 +94,6 @@ input[type=submit] {
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
-
-
-
-
 
 /* responsive */
 .collapse:not(.show) {

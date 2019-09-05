@@ -1,47 +1,18 @@
-/* Line 2 not required as netlify can host variables */
-// var k = (api.key)
+function autocomplete(inp, arr, limit) {
 
-// console.log(process.env._k);
 
-// var k = process.env._k;
-
-var typingTimer; //timer identifier
-var doneTypingInterval = 1; //time in ms, 5 second for example
-var $input = $("#myInput");
-
-//on keyup, start the countdown
-$input.on("keyup", function () {
-    clearTimeout(typingTimer);
-    typingTimer = setTimeout(doneTyping, doneTypingInterval);
-});
-
-//on keydown, clear the countdown
-$input.on("keydown", function () {
-    clearTimeout(typingTimer);
-});
-
-//user is "finished typing," do something
-function doneTyping() {
-    // console.log($input.val());
-    var search = $input.val();
-    autocomplete(document.getElementById("myInput"), companies);
-}
-
-function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
-	the text field element and an array of possible autocompleted values:*/
+    the text field element and an array of possible autocompleted values:*/
     var currentFocus;
     /*execute a function when someone writes in the text field:*/
+
+    limit = limit || 10;
+
     inp.addEventListener("input", function (e) {
-        var a,
-            b,
-            i,
-            val = this.value;
+        var a, b, i, val = this.value;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
-        if (!val) {
-            return false;
-        }
+        if (!val) { return false; }
         currentFocus = -1;
         /*create a DIV element that will contain the items (values):*/
         a = document.createElement("DIV");
@@ -50,16 +21,17 @@ function autocomplete(inp, arr) {
         /*append the DIV element as a child of the autocomplete container:*/
         this.parentNode.appendChild(a);
         /*for each item in the array...*/
-        for (i = 0; i < arr.length; i++) {
+        for (i = 0, numRes = 0; i < arr.length; i++) {
             /*check if the item starts with the same letters as the text field value:*/
-            if (
-                arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
-            ) {
+            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                /*Limits results to 10*/
+                if (numRes++ >= limit) {
+                    break;
+                }
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
                 /*make the matching letters bold:*/
-                b.innerHTML =
-                    "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
                 b.innerHTML += arr[i].substr(val.length);
                 /*insert a input field that will hold the current array item's value:*/
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
@@ -100,7 +72,6 @@ function autocomplete(inp, arr) {
                                 }
                             });
                         });
-
                     closeAllLists();
                 });
                 a.appendChild(b);
@@ -113,14 +84,13 @@ function autocomplete(inp, arr) {
         if (x) x = x.getElementsByTagName("div");
         if (e.keyCode == 40) {
             /*If the arrow DOWN key is pressed,
-			increase the currentFocus variable:*/
+            increase the currentFocus variable:*/
             currentFocus++;
             /*and and make the current item more visible:*/
             addActive(x);
-        } else if (e.keyCode == 38) {
-            //up
+        } else if (e.keyCode == 38) { //up
             /*If the arrow UP key is pressed,
-			decrease the currentFocus variable:*/
+            decrease the currentFocus variable:*/
             currentFocus--;
             /*and and make the current item more visible:*/
             addActive(x);
@@ -139,11 +109,10 @@ function autocomplete(inp, arr) {
         /*start by removing the "active" class on all items:*/
         removeActive(x);
         if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = x.length - 1;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
         /*add class "autocomplete-active":*/
         x[currentFocus].classList.add("autocomplete-active");
     }
-    
     function removeActive(x) {
         /*a function to remove the "active" class from all autocomplete items:*/
         for (var i = 0; i < x.length; i++) {
@@ -152,7 +121,7 @@ function autocomplete(inp, arr) {
     }
     function closeAllLists(elmnt) {
         /*close all autocomplete lists in the document,
-		except the one passed as an argument:*/
+        except the one passed as an argument:*/
         var x = document.getElementsByClassName("autocomplete-items");
         for (var i = 0; i < x.length; i++) {
             if (elmnt != x[i] && elmnt != inp) {
