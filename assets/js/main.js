@@ -15,6 +15,7 @@ function autocomplete(inp, arr, limit) {
         if (!val) { return false; }
         currentFocus = -1;
         /*create a DIV element that will contain the items (values):*/
+        document.getElementById("price").innerHTML = ``
         a = document.createElement("DIV");
         a.setAttribute("id", this.id + "autocomplete-list");
         a.setAttribute("class", "autocomplete-items");

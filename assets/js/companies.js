@@ -5143,7 +5143,7 @@ var companies = [
 'MGM Resorts International Common Stock MGM',
 'MGP Ingredients, Inc. MGPI',
 'MGT Capital Investments Inc Common Stock MGT',
-'Michael Kors Holdings Limited Ordinary Shares KORS',
+'Michael Kors (Capri Holdings Ltd) CPRI',
 'Microbot Medical Inc.  MBOT',
 'Microchip Technology Incorporated MCHP',
 'Micron Technology, Inc. MU',
