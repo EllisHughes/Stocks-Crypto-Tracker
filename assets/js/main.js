@@ -1,13 +1,6 @@
 function autocomplete(inp, arr, limit) {
-
-
-    /*the autocomplete function takes two arguments,
-    the text field element and an array of possible autocompleted values:*/
     var currentFocus;
-    /*execute a function when someone writes in the text field:*/
-
     limit = limit || 10;
-
     inp.addEventListener("input", function (e) {
         var a, b, i, val = this.value;
         /*close any already open lists of autocompleted values*/
@@ -49,12 +42,9 @@ function autocomplete(inp, arr, limit) {
                     //tag.match(/\((.*)\)/);
                     var n = tag.split(" ");
                     n = n[n.length - 1];
-                    // console.log(n)
-                    // import apiKey from "assets/js/pk.js"
                     fetch(
                         `https://cloud.iexapis.com/stable/stock/${n}/quote?token=pk_e9e24d928d1f4b4e8b5565d2561c4bb1`
                     )
-
                         .then(function (response) {
                             return response.json();
                         })
