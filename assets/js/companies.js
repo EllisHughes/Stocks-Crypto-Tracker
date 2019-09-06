@@ -7044,7 +7044,7 @@ var companies = [
 'Suburban Propane Partners, L.P. Common Stock SPH',
 'Sumitomo Mitsui Financial Group Inc Unsponsored American Depositary Shares (Japan) SMFG',
 'Summer Infant, Inc. SUMR',
-'Summit Financial Group, Inc. SMMF',,
+'Summit Financial Group, Inc. SMMF',
 'Summit Hotel Properties, Inc. Common Stock INN',
 'Summit Midstream Partners, LP Common Units Representing Limited Partner Interests SMLP',
 'Summit State Bank SSBI',
