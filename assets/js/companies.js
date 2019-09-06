@@ -455,7 +455,7 @@ var companies = [
 'Anterix Inc. ATEX',
 'Antero Midstream Partners LP Common Units representing limited partner interests AM',
 'Antero Resources Corporation Common Stock AR',
-'Anthem, Inc. Common Stock ANTM',,
+'Anthem, Inc. Common Stock ANTM',
 'Anworth Mortgage Asset Corporation Common Stock ANH',
 'Aon plc Class A Ordinary Shares (UK) AON',
 'Aoxing Pharmaceutical Company, Inc. New Common Stock AXN',
