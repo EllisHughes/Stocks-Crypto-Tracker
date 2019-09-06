@@ -8186,7 +8186,6 @@ var companies = [
 'Zafgen, Inc. ZFGN',
 'ZAGG Inc ZAGG',
 'Zai Lab Limited ZLAB',
-'ZAIS Financial Corp. Common Stock ZFC',
 'Zayo Group Holdings, Inc. Common Stock ZAYO',
 'ZBB Energy Corporation Common Stock ZBB',
 'Zealand Pharma A/S ZEAL',
