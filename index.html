@@ -21,7 +21,7 @@
 
 <body>
 
-    <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center navBar">
+    <nav id="Nav" class="navbar navbar-light navbar-expand-md bg-light justify-content-center navBar">
         <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
             <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item active">
@@ -37,7 +37,7 @@
 
     <div id="tickerSearchForm" class="autocomplete tickerSearchForm cursor">
         <form autocomplete="off" action="/action_page.php">
-            <input id="myInput" placeholder="Search for a stock" onfocus="this.placeholder = ''" type="text" class="tickerSearch"/>
+            <input id="myInput" onblur="this.placeholder = 'Search for a stock'" placeholder="Search for a stock" onfocus="this.placeholder = ''" type="text" class="tickerSearch"/>
         </form>
         <h1 id="price"></h1>
     </div>

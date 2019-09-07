@@ -9,6 +9,11 @@ h1 {
   font-weight: 300 !important;
 }
 
+.navBar {
+  position: absolute;
+  border-bottom: 1px solid #7c7c7c;
+}
+
 .container {
   margin-top: 20vh;
 }
@@ -170,7 +175,7 @@ h1 {
 
 @media (min-width: 1200px){
   .navBar{
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .container {
