@@ -1,20 +1,3 @@
-// FETCH FX RATES UPON PAGE LOAD //
-fetch(`https://api.exchangeratesapi.io/latest?base=USD`)
-    .then(function (response) {
-        return response.json()
-    })
-    .then(function (myJson) {
-        var GBP = (myJson.rates.GBP)
-    });
-
-fetch(`https://api.exchangeratesapi.io/latest?base=GBP`)
-    .then(function (response) {
-        return response.json()
-    })
-    .then(function (myJson) {
-        var USD = (myJson.rates.USD)
-    });
-
 function refreshData() {
     x = 30;
     fetch('https://api.coincap.io/v2/assets/bitcoin')
@@ -72,4 +55,24 @@ function refreshData() {
 refreshData();
 
 
+document.getElementById("Test").onclick = function () {
 
+    fetch('https://api.coincap.io/v2/assets/bitcoin')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            var price = parseFloat(myJson.data.priceUsd).toFixed(2);
+            var GBP = price * 0.8;
+            console.log
+            bitcoinUSD = document.getElementById(
+                "cryptoPricesBitcoin"
+            ).innerHTML = `£` + parseFloat(`${GBP}`).toLocaleString('en');
+
+
+            document.getElementById(
+                "btc24"
+            ).innerHTML = parseFloat(`${myJson.data.changePercent24Hr}`).toFixed(2) + `%`;
+        });
+
+}
