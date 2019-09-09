@@ -8,16 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"" />
     <link href=" https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300&display=swap" rel="stylesheet" />
 </head>
-
-
-
 
 <body>
 
@@ -34,26 +29,18 @@
         </div>
     </nav>
 
-
     <div id="tickerSearchForm" class="autocomplete tickerSearchForm cursor">
         <form autocomplete="off" action="/action_page.php">
-            <input id="myInput" onblur="this.placeholder = 'Search for a stock'" placeholder="Search for a stock" onfocus="this.placeholder = ''" type="text" class="tickerSearch"/>
+            <input id="myInput" onblur="this.placeholder = 'Search for a stock'" placeholder="Search for a stock"
+                onfocus="this.placeholder = ''" type="text" class="tickerSearch" />
         </form>
         <h1 id="price"></h1>
     </div>
 
-    <!-- Scripts -->
-
-    <!-- <script src="assets/js/pk.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/companies.js"></script>
-    <script>
-        autocomplete(document.getElementById("myInput"), companies);
-    </script>
-
-
-
+    <script>autocomplete(document.getElementById("myInput"), companies);</script>
 </body>
 
 </html>

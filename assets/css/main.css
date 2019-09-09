@@ -12,7 +12,6 @@ font-size: 1rem;
 display: flex;
 justify-content: center;
 align-items: center;
-/* margin-top: 10vh; */
 }
 
 .tickerSearch {
@@ -29,7 +28,6 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-
 #price {
   color: black;
   font-family: 'Work Sans', sans-serif;
@@ -37,7 +35,6 @@ textarea:focus, input:focus{
 }
 
 * { box-sizing: border-box; }
-
 
 .autocomplete {
   position: relative;
@@ -70,7 +67,6 @@ input[type=submit] {
   border-bottom: none;
   border-top: none;
   z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
   top: 100%;
   left: 0;
   right: 0;
@@ -82,11 +78,9 @@ input[type=submit] {
   border-bottom: 1px solid #F8F9FA;
 }
 .autocomplete-items div:hover {
-  /*when hovering an item:*/
   background-color: #7979791a;
 }
 .autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
   background-color: #7979791a !important;
 }
 
@@ -96,7 +90,6 @@ input[type=submit] {
   font-family: 'Raleway', sans-serif;
 }
 
-/* responsive */
 .collapse:not(.show) {
   display: block !important;
 }

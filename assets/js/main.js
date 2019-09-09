@@ -4,11 +4,9 @@ function autocomplete(inp, arr, limit) {
 
     inp.addEventListener("input", function (e) {
         var a, b, i, val = this.value;
-        /*close any already open lists of autocompleted values*/
         closeAllLists();
         if (!val) { return false; }
         currentFocus = -1;
-        /*create a DIV element that will contain the items (values):*/
         document.getElementById("price").innerHTML = ``
         a = document.createElement("DIV");
         a.setAttribute("id", this.id + "autocomplete-list");
